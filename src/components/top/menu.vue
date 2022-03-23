@@ -22,7 +22,7 @@
                     <div class="col-xl-8">
                         <ul class="navigation__nav" :class="{'navigation__nav-black' : backMenu == true}">
                             <li>Home</li>
-                            <li @click="activeСourses">Сourses <i :class="toggleArrow"></i></li>
+                            <li @click="activeСourses()">Сourses <i :class="toggleArrow"></i></li>
                             <li>Promotions</li>
                             <li>About us</li>
                             <li @click="authActive = !authActive" :id="btnStyle" class="navigation__nav-btn" :class="{'navigation__nav-btn-black' : backMenu == true}">Log in</li>
