@@ -53,7 +53,7 @@ export default{
             arrowNavToggle: false,
             backMenu: false,
             activeCoursesBuy: false,
-            authActive: true
+            authActive: false
         }
     },
 
