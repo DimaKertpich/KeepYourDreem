@@ -1,28 +1,30 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div>
+      <dv-menu></dv-menu>
+      <dv-header></dv-header>
+      <dv-traning></dv-traning>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import menu from './components/top/menu.vue'
+import header from './components/top/header.vue'
+import traning from './components/Content/typeTraning.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    'dv-menu' : menu,
+    'dv-header' : header,
+    'dv-traning' : traning
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+
 </style>

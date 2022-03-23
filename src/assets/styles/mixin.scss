@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=Hammersmith+One&family=Montserrat:wght@300;400;600;700&family=Roboto:wght@300;500;700&family=Secular+One&display=swap');
+
+@mixin hammersmith{
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+@mixin secularOne{
+    font-family: 'Secular One', sans-serif;
+}
+
+@mixin montserratLight(){
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+@mixin montserratRegular(){
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+@mixin montserratSemiBold(){
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+@mixin montserratBold(){
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+@mixin robotoLight(){
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+@mixin robotoRegular(){
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+@mixin robotoMedium(){
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+@mixin robotoBold(){
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+@mixin comfortaLight(){
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 300;
+}
+
+@mixin comfortaBold(){
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 700;
+}
