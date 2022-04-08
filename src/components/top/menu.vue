@@ -32,7 +32,7 @@
             </div>
 
             <dv-courses v-if="activeCoursesBuy == true"></dv-courses>
-            <dv-authorization class="animate__animated animate__slideInLeft" v-if="authActive == true"
+            <dv-authorization v-if="authActive == true"
                               @hideRegistr="hideRegistr"
             ></dv-authorization>
         </section>

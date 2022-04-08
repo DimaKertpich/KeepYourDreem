@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-8">
-                    <div class="traning__title text-center">
+                    <div class="traning__title text-center wow animate__animated animate__fadeIn" data-wow-delay=".5s">
                         <h3>There is always a choice</h3>         
                     </div>
                 </div>
@@ -11,7 +11,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6">
                     <div class="traning__content text-center">
-                        <div class="traning__content-title">
+                        <div class="traning__content-title wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
                             <h3>You can join our Keep Your Dreem team by changing people with us</h3>
                         </div>
                     </div>
@@ -19,7 +19,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-xl-8">
-                    <div class="traning__content-about animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="traning__content-about wow animate__animated animate__fadeInLeft" data-wow-delay="1s">
                         <h2>What we are?</h2>
 
                         <p>
@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="col-xl-8">
-                    <div class="traning__content-about">
+                    <div class="traning__content-about wow animate__animated animate__fadeInLeft" data-wow-delay="1s">
                         <h2>OUR MISSION & OBJECTIVES</h2>
 
                         <p>
@@ -55,6 +55,27 @@
         </div>
     </section>
 </template>
+
+<script>
+
+import { WOW } from 'wowjs'
+
+export default{
+    mounted(){
+        var wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true
+        })
+        wow.init();
+    }
+        
+
+    
+}
+
+</script>
 
 <style lang="scss">
 
