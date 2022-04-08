@@ -32,7 +32,7 @@
             </div>
 
             <dv-courses v-if="activeCoursesBuy == true"></dv-courses>
-            <dv-authorization v-if="authActive == true"
+            <dv-authorization class="animate__animated animate__slideInLeft" v-if="authActive == true"
                               @hideRegistr="hideRegistr"
             ></dv-authorization>
         </section>
@@ -53,11 +53,13 @@ export default{
             arrowNavToggle: false,
             backMenu: false,
             activeCoursesBuy: false,
-            authActive: false
+            authActive: false,
+            leftMenuAnimation: true
         }
     },
 
     methods:{
+
         activeСourses(){
             this.arrowNavToggle = !this.arrowNavToggle;
             this.activeCoursesBuy = !this.activeCoursesBuy;
@@ -72,7 +74,7 @@ export default{
         },
 
         hideRegistr(){
-            this.authActive = false
+            this.authActive = false;
         }
     },
 
@@ -107,7 +109,7 @@ export default{
         left: 0;
         width: 100%;
         z-index: 10;
-        padding: 26px 0 12px 0 ;
+        padding: 26px 0 12px 0;
 
         &__logo{
             display: flex;
@@ -169,6 +171,7 @@ export default{
 
         &__scroll{
             background: $colorWhite;
+            box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
         }
 
         
