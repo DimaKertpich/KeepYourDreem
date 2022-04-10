@@ -3,7 +3,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4">
-                        <div class="navigation__logo justify-content-center">
+                        <div class="navigation__logo justify-content-center wow animate__animated animate__fadeIn" data-wow-delay=".4s">
                             <div class="navigation__logo-main" 
                                 :class="{'navigation__logo-main-black' : backMenu == true}" >
                                 <h3>gym</h3>
@@ -20,7 +20,7 @@
                     </div>
 
                     <div class="col-xl-8">
-                        <ul class="navigation__nav" :class="{'navigation__nav-black' : backMenu == true}">
+                        <ul class="navigation__nav wow animate__animated animate__fadeIn" data-wow-delay=".4s" :class="{'navigation__nav-black' : backMenu == true}">
                             <li>Home</li>
                             <li @click="activeСourses()">Сourses <i :class="toggleArrow"></i></li>
                             <li>Promotions</li>

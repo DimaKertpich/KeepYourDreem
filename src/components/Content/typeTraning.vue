@@ -2,14 +2,14 @@
     <section class="traning">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-xl-8">
+                <div class="col-xl-4">
                     <div class="traning__title text-center wow animate__animated animate__fadeIn" data-wow-delay=".5s">
-                        <h3>There is always a choice</h3>         
+                        <h3>About our team</h3>         
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-xl-6">
+                <div class="col-xl-4">
                     <div class="traning__content text-center">
                         <div class="traning__content-title wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
                             <h3>You can join our Keep Your Dreem team by changing people with us</h3>
@@ -41,12 +41,12 @@
             </div>
             <div class="row justify-content-around text-center">
                 <div class="col-xl-6">
-                    <div class="traning__content-about-from">
+                    <div class="traning__content-about-from wow animate__animated animate__slideInLeft" data-wow-delay=".8s">
                         <h1>Subscribe to our newsletter</h1>
                     </div>
                 </div>
                 <div class="col-xl-6">
-                    <div class="traning__content-about-from d-flex">
+                    <div class="traning__content-about-from d-flex wow animate__animated animate__slideInRight" data-wow-delay=".8s">
                         <input type="email" name="email" placeholder="Enter your email"> 
                         <button type="button">Subscribe</button>
                     </div>
@@ -56,26 +56,6 @@
     </section>
 </template>
 
-<script>
-
-import { WOW } from 'wowjs'
-
-export default{
-    mounted(){
-        var wow = new WOW({
-            boxClass: 'wow',
-            animateClass: 'animated',
-            offset: 0,
-            mobile: true
-        })
-        wow.init();
-    }
-        
-
-    
-}
-
-</script>
 
 <style lang="scss">
 
@@ -91,7 +71,7 @@ export default{
         h3{
             @include hammersmith();
 
-            font-size: 50px;
+            font-size: 42px;
             color: $colorWhite;
             background: $colorBlack;
             text-transform: uppercase;
@@ -106,17 +86,17 @@ export default{
 
     &__content-title{
 
-        margin-top: 50px;
+        margin-top: 30px;
 
         h3{
             @include robotoLight();
 
-            font-size: 24px;
+            font-size: 22px;
         }
     }
 
     &__content-about{
-        padding-top: 60px;
+        padding-top: 20px;
         h2{
             @include robotoLight();
             
