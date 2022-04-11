@@ -13,32 +13,39 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-around text-center">
-                <div class="col-xl-4">
-                    <div class="choice__btn">
-                        <button @click="toggleBtn = true" :class="{activeBtn : toggleBtn == true}">In the gym</button>
-                        <button @click="toggleBtn = false" :class="{activeBtn : toggleBtn == false}">At home</button>
-                    </div>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-xl-6">
                     <div class="choice__relative">
                         <ul class="choice__gym-img">
-                            <li class="choice__fade" :class="{moveGymImg : index == currentGymImg}" 
-                            :key="index" v-for="(gymImg, index) in arrayGymImg">
-                                <span @click="increaseNumbMinus" class="choice__gym-img-arrowL">
+                            <li @mouseover="showArrow = true" 
+                                @mouseleave="showArrow = false" 
+                                class="choice__fade" 
+                                :class="{moveGymImg : index == currentGymImg, changeAfter : showArrow == true}" 
+                                :key="index" v-for="(gymImg, index) in arrayGymImg">
+
+                                <span v-if="showArrow == true" @click="increaseNumbMinus" class="choice__gym-img-arrowL">
                                     <font-awesome-icon icon="fa-solid fa-angle-left" />
                                 </span>
 
                                 <img :src="choiceImgGym(gymImg)">
 
-                                <span @click="increaseNumbPlus" class="choice__gym-img-arrowR">
+                                <div v-if="showArrow == true" class="choice__gym-img-text">
+                                    <p>
+                                        Here you can pump your every muscle using extra load
+                                    <br>
+                                    <br>
+                                        <a href="../Content/choice.vue">Learn more</a> 
+                                    </p>
+                                </div>
+
+                                <span v-if="showArrow == true" @click="increaseNumbPlus" class="choice__gym-img-arrowR">
                                     <font-awesome-icon icon="fa-solid fa-angle-right" />
                                 </span>
+
+                                
                             </li>
-                            
                         </ul>
+
                     </div>
                 </div>
             </div>
@@ -53,6 +60,7 @@ export default{
         return{
             toggleBtn: true,
             currentGymImg: 0,
+            showArrow: false,
             arrayGymImg:["gym-1.jpg","gym-2.jpg","gym-3.jpg"]
         }
     },
@@ -78,6 +86,10 @@ export default{
             if(this.currentGymImg < 0){
                 this.currentGymImg = 2
             }
+        },
+
+        showContent(){
+            console.log(1);
         }
     }
 }
@@ -114,34 +126,10 @@ export default{
         }
     }
 
-    &__btn{
-
-        margin-top: 20px;
-
-        button{
-            @include robotoRegular();
-            
-            width: 110px;
-            height: 40px;
-            font-size: 16px;
-            display: inline;
-            padding-top: 6px;
-            border: 1px solid $colorBlack;
-            background: $colorWhite;
-            transition: .3s ease-in-out;
-        }
-    }
-
-
-    .activeBtn{
-        background: $colorBlack;
-        color: $colorWhite;
-    }
-
     &__relative{
         position: relative;
         height: 400px;
-        margin-top: 100px;
+        margin-top: 60px;
         width: 100%;
         overflow: hidden;
     }
@@ -158,7 +146,7 @@ export default{
             display: inline;
 
             img{
-              width: 580px;
+              width: 100%;
             }
 
             
@@ -169,42 +157,46 @@ export default{
             display: block;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, .4);
+            background: rgba(0, 0, 0, .3);
             position: absolute;
             top: 0;
             left: 0;
             z-index: 10;
         }
 
+        li.changeAfter:after{
+            background: rgba(0, 0, 0, .7);
+        }
+
         li:nth-child(1){
-                margin-left: -580px;
+                margin-top: -1080px;
             }
 
         li:nth-child(2){
-                margin-left: -580px;
+                margin-top: -1080px;
             }
 
         li:nth-child(3){
-                margin-left: -580px;
+                margin-top: -1080px;
             } 
 
         li:nth-child(1).moveGymImg{
-                margin-left: 0px;
+                margin-top: 0px;
             }
 
         li:nth-child(2).moveGymImg{
-                margin-left: 0px;
+                margin-top: 0px;
             }
 
         li:nth-child(3).moveGymImg{
-                margin-left: 0px;
+                margin-top: 0px;
             }
     }
 
     &__gym-img-arrowL{
 
         position: absolute;
-        top: 120px;
+        top: 140px;
         left: 0;
         font-size: 26px;
         color: rgba(255, 255, 255, .9);
@@ -217,7 +209,7 @@ export default{
     &__gym-img-arrowR{
 
         position: absolute;
-        top: 120px;
+        top: 140px;
         right: 0;
         font-size: 26px;
         color: rgba(255, 255, 255, .9);
@@ -235,15 +227,32 @@ export default{
         from{opacity: .4;}
         to{opacity: 1;}
     }
+
+    &__gym-img-text{
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 20;
+
+        p{
+            @include montserratLight();
+
+            font-size: 20px;
+            text-align: center;
+            color: $choiceGymImgText;
+            padding: 0px 100px 0;
+
+                a{
+                    @include robotoLight();
+                    font-size: 18px;
+                    color: $colorWhite;
+                    list-style-type: none;
+                    text-decoration: none;
+                }
+
+        }
+
+    }
 }
 
-.fade{
-    animation-name: fade;
-    animation-duration: 1,5s;
-}
-
-@keyframes fade{
-    from{opacity: .4;}
-    to{opacity: 1;}
-}
 </style>
