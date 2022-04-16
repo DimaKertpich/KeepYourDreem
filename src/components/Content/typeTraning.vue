@@ -40,13 +40,13 @@
                 </div>                
             </div>
             <div class="row justify-content-around text-center">
-                <div class="col-xl-6">
+                <div class="col-xl-6" style="overflow: hidden">
                     <div class="traning__content-about-from wow animate__animated animate__slideInLeft" data-wow-delay=".8s">
                         <h1>Subscribe to our newsletter</h1>
                     </div>
                 </div>
-                <div class="col-xl-6">
-                    <div class="traning__content-about-from d-flex wow animate__animated animate__slideInRight" data-wow-delay=".8s">
+                <div class="col-xl-6" style="overflow: hidden">
+                    <div class="traning__content-about-from d-flex wow animate__animated animate__slideInRight" data-wow-delay=".6s">
                         <input type="email" name="email" placeholder="Enter your email"> 
                         <button type="button">Subscribe</button>
                     </div>

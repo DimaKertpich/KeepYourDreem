@@ -21,7 +21,7 @@
                                     <span @click="toggleCheck('active')" v-if="item.check == false" class="authorization__eye-active"><font-awesome-icon icon="fa-solid fa-eye" /></span>
                                     <span @click="toggleCheck('deactivated')" v-if="item.check == true" class="authorization__eye-deactivate"><font-awesome-icon icon="fa-solid fa-eye-slash" /></span>
                                     <span v-if="item.activated == true" :class="validToggle(index)"></span></label>
-                                    <input @input="savaData($event.target.value, index)" :type="item.type" :value="item.value">
+                                    <input @input="savaData($event.target.value, index)" :name="item.type" :type="item.type" :value="item.value">
                                 </div>
 
                                 <div class="authorization__btn">
@@ -63,7 +63,7 @@
                                 <label>{{ item.name }}
                                 <span @click="toggleCheckLog('active')" v-if="item.check == false" class="authorization__eye-active"><font-awesome-icon icon="fa-solid fa-eye" /></span>
                                 <span @click="toggleCheckLog('deactivated')" v-if="item.check == true" class="authorization__eye-deactivate"><font-awesome-icon icon="fa-solid fa-eye-slash" /></span></label>
-                                <input @input="dataLogin($event.target.value, index)" :type="item.type" :value="item.value">
+                                <input @input="dataLogin($event.target.value, index)" :name="item.type" :type="item.type" :value="item.value">
                             </div>
 
                             <div class="authorization__btn">
