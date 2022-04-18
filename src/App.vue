@@ -7,6 +7,9 @@
       <div class="line"></div>
 
       <dv-traning></dv-traning>
+
+      <div class="line"></div>
+      <dv-comment></dv-comment>
     </div>
 </template>
 
@@ -14,8 +17,9 @@
 
 import menu from './components/top/menu.vue'
 import header from './components/top/header.vue'
-import traning from './components/Content/typeTraning.vue'
+import traning from './components/Content/aboutUs.vue'
 import choice from './components/Content/choice.vue'
+import comment from './components/Content/comment.vue'
 import { WOW } from 'wowjs'
 
 export default {
@@ -24,7 +28,8 @@ export default {
     'dv-menu' : menu,
     'dv-header' : header,
     'dv-traning' : traning,
-    'dv-choice' : choice
+    'dv-choice' : choice,
+    'dv-comment' : comment
   },
 
   mounted(){

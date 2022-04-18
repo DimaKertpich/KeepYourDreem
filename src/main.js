@@ -13,10 +13,11 @@ import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faEye, faEyeSlash, faCircleCheck, faUser, faAngleLeft, faAngleRight);
+library.add(faEye, faEyeSlash, faCircleCheck, faUser, faAngleLeft, faAngleRight, faTrash);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
