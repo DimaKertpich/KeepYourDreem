@@ -3,10 +3,10 @@
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-xl-5">
-                    <div class="comments__title">
-                        <h3>Leave your feedback</h3>
+                    <div class="comments__title" >
+                        <h3 class="wow animate__animated animate__fadeIn" data-wow-delay=".5s">Leave your feedback</h3>
 
-                        <p>
+                        <p class="wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
                             Here you can leave your feedback about our project to improve it
                         </p>
                     </div>
@@ -14,7 +14,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-xl-6">
-                        <div :key="index" v-for="(data, index) in commentedUser" class="comments__feedback">
+                        <div :key="index" v-for="(data, index) in commentedUser" class="comments__feedback wow animate__animated animate__fadeIn">
                             <div class="comments__feedback-wrapper">
                                 <div class="comments__feedback-user">
                                     <div class="comments__feedback-user-icon">
@@ -43,9 +43,12 @@
                             You must be logged in to post a commen
                         </p>
 
-                        <textarea :value="clearComment" @input="writeName($event.target.value)" placeholder="Enter your message"></textarea>
+                        <textarea class="wow animate__animated animate__fadeInLeft" 
+                                  data-wow-delay=".5s" 
+                                  :value="clearComment" @input="writeName($event.target.value)" 
+                                  placeholder="Enter your message"></textarea>
                        
-                        <button @click="addUser" type="button">Send</button>                           
+                        <button class="wow animate__animated animate__fadeInRight" data-wow-delay=".5s" @click="addUser" type="button">Send</button>                           
                     </div>
                 </div>
             </div>
