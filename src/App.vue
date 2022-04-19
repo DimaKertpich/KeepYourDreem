@@ -10,6 +10,8 @@
 
       <div class="line"></div>
       <dv-comment></dv-comment>
+      <div class="line"></div>
+      <dv-footer></dv-footer>
     </div>
 </template>
 
@@ -20,6 +22,7 @@ import header from './components/top/header.vue'
 import traning from './components/Content/aboutUs.vue'
 import choice from './components/Content/choice.vue'
 import comment from './components/Content/comment.vue'
+import footer from './components/Content/footer.vue'
 import { WOW } from 'wowjs'
 
 export default {
@@ -29,7 +32,8 @@ export default {
     'dv-header' : header,
     'dv-traning' : traning,
     'dv-choice' : choice,
-    'dv-comment' : comment
+    'dv-comment' : comment,
+    'dv-footer' : footer
   },
 
   mounted(){
@@ -47,7 +51,7 @@ export default {
 <style>
 
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+
 
 .line{
   width: 90%;

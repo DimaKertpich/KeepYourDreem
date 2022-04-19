@@ -14,10 +14,17 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faGooglePlusSquare } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
+
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faEye, faEyeSlash, faCircleCheck, faUser, faAngleLeft, faAngleRight, faTrash);
+library.add(faEye, faEyeSlash, faCircleCheck, faUser, faAngleLeft, faAngleRight, faTrash, faTwitterSquare, faFacebook, faGooglePlusSquare, faLinkedin, faInstagramSquare);
+
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 

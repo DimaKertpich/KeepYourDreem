@@ -168,7 +168,9 @@ export default{
 @import "../../assets/styles/allFiles.scss";
 
 .choice{
-
+    
+    padding-bottom: 80px;
+    
     &__title{
         margin-top: 100px;
 

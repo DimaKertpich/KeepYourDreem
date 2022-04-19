@@ -131,6 +131,8 @@ export default{
 
 .comments{
 
+    padding-bottom: 80px;
+
     &__title{
 
         margin-top: 100px;
