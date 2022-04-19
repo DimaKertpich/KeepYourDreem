@@ -19,11 +19,14 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { faGooglePlusSquare } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons'
+
 
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faEye, faEyeSlash, faCircleCheck, faUser, faAngleLeft, faAngleRight, faTrash, faTwitterSquare, faFacebook, faGooglePlusSquare, faLinkedin, faInstagramSquare);
+library.add(faEye, faEyeSlash, faCircleCheck, faUser, faAngleLeft, faAngleRight, faTrash, faTwitterSquare, faFacebook, faGooglePlusSquare, faLinkedin, faInstagramSquare, faAngleDown, faAngleUp);
 
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);

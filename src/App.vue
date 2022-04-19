@@ -12,6 +12,7 @@
       <dv-comment></dv-comment>
       <div class="line"></div>
       <dv-footer></dv-footer>
+      <dv-copyRight></dv-copyRight>
     </div>
 </template>
 
@@ -23,6 +24,7 @@ import traning from './components/Content/aboutUs.vue'
 import choice from './components/Content/choice.vue'
 import comment from './components/Content/comment.vue'
 import footer from './components/Content/footer.vue'
+import copyRight from './components/Content/copyright.vue'
 import { WOW } from 'wowjs'
 
 export default {
@@ -33,7 +35,8 @@ export default {
     'dv-traning' : traning,
     'dv-choice' : choice,
     'dv-comment' : comment,
-    'dv-footer' : footer
+    'dv-footer' : footer,
+    'dv-copyRight' : copyRight
   },
 
   mounted(){

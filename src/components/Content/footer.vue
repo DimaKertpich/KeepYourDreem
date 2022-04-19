@@ -68,7 +68,7 @@
 
 .footer{
 
-    padding-top: 80px;
+    padding: 80px 0 60px;
 
     &__wrapper-flex-logo{
 
@@ -107,7 +107,8 @@
         list-style-type: none;
 
         li{
-
+            max-width: 28px;
+            max-height: 48px;
             font-size: 32px;
             cursor: pointer;
             color: $navColorTextBlack;
@@ -132,6 +133,7 @@
         }
 
         li{
+            max-width: 196px;
             padding-top: 10px;
             a{  
                 @include montserratRegular();

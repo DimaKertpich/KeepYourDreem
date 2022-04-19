@@ -22,7 +22,7 @@
                     <div class="col-xl-8">
                         <ul class="navigation__nav wow animate__animated animate__fadeIn" data-wow-delay=".4s" :class="{'navigation__nav-black' : backMenu == true}">
                             <li>Home</li>
-                            <li @click="activeСourses()">Сourses <i :class="toggleArrow"></i></li>
+                            <li @click="activeСourses()">Сourses <span><font-awesome-icon :icon="toggleArrow" /></span></li>
                             <li>Promotions</li>
                             <li>About us</li>
                             <li @click="authActive = !authActive" :id="btnStyle" class="navigation__nav-btn" :class="{'navigation__nav-btn-black' : backMenu == true}">Log in</li>
@@ -79,10 +79,9 @@ export default{
     },
 
     computed: {
-
         toggleArrow(){
             
-            return (this.arrowNavToggle == false) ? 'fas fa-chevron-down' : 'fas fa-chevron-up';
+            return (this.arrowNavToggle == false) ? 'fa-solid fa-angle-down' : 'fa-solid fa-angle-up';
         },
 
         btnStyle(){ 
@@ -151,15 +150,12 @@ export default{
                     margin-right: 64px;
                     cursor: pointer;
 
-                    i{
+                    span{
                         font-size: 12px;
                     }
+                   
                 }
-
-                // :nth-child(5){
-                //     margin-right: 0px;
-                //     color: $colorBlack;
-                // }   
+  
         }
 
         &__nav-btn{
