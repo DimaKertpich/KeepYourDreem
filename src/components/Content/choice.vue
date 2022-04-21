@@ -110,7 +110,7 @@ export default{
             arrayGymImg:["gym-1.jpg","gym-2.jpg","gym-3.jpg"],
             arrayHomeImg: ["workout-1.jpg", "workout-2.jpg", "workout-3.jpg"],
             activeTypeGym: true,
-            activeTypeHome: false
+            activeTypeHome: true
         }
     },
 
