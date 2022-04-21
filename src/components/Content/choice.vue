@@ -180,13 +180,22 @@ export default{
             
                this.showHomeText = false
             }, 100)
+        },
+
+        toggleChoice(){
+            if(window.innerWidth < 992){
+                this.activeTypeHome = false               
+            }
+
+            if(window.innerWidth > 992){
+                this.activeTypeHome = true               
+            }
         }
     },
 
     mounted(){
-        if(window.innerWidth < 992){
-            this.activeTypeHome = false
-        }
+
+        window.addEventListener('resize', this.toggleChoice);
     }
 }
 
@@ -449,7 +458,7 @@ export default{
 
         &__home-img-hoverText,
         &__gym-img-hoverText{
-            top: 96px;
+            top: 58px;
             p{
                 font-size: 18px;
                 padding: 0px 60px 0px;
@@ -460,6 +469,18 @@ export default{
 
             }
 
+        }
+
+         &__home-img-arrowL,
+        &__gym-img-arrowL{
+
+            top: 130px;
+        }
+
+        &__home-img-arrowR,
+        &__gym-img-arrowR{
+
+            top: 130px;
         }
     }
 }
