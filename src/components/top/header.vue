@@ -3,7 +3,7 @@
             :class="{'header-one' : activeImg == 1, 'header-two ' : activeImg == 2,'header-three ' : activeImg == 3,'header-four ' : activeImg == 4}">
         <div class="container">
             <div class="row justify-content-center">
-              <div class="col-xl-8 text-center">
+              <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 text-center">
                    <div class="header__title">
                         <h3 class="wow animate__animated animate__fadeIn" data-wow-delay="1s">Everyone needs change </h3>
                         <p class="wow animate__animated animate__fadeInUp" data-wow-delay="1.2s">Powered by <a href="https://www.instagram.com/d78_voluychik/">@d78_voluychik</a></p>
@@ -99,7 +99,6 @@ export default{
     &__title{
         display: block;
         padding-top: 240px;
-         
         h3{
             @include hammersmith();
             
@@ -126,7 +125,7 @@ export default{
             background: $colorWhite;
             position: absolute;
             top: 12px;
-            left: 33%;
+            left: 36%;
         }
 
         p:before{
@@ -137,7 +136,7 @@ export default{
             background: $colorWhite;
             position: absolute;
             top: 12px;
-            right: 33%;
+            right: 36%;
         }
 
         span{
@@ -172,6 +171,160 @@ export default{
         background: $colorWhite;
         border: 1px solid $colorWhite;
         border-radius: 2px;
+    }
+}
+
+@media only screen and(max-width: 1300px){
+
+    .header{
+        &__title{
+
+            p:after{
+                left: 33%;
+            }
+
+            p:before{
+                right: 33%;
+            }
+
+        }
+    }
+}
+
+@media only screen and(max-width: 1200px){
+
+    .header{
+
+        &__title{
+
+            p:after{
+                left: 30%;
+            }
+
+            p:before{
+                right: 30%;
+            }
+
+        }
+
+        &__btn{
+            padding: 0 230px;
+        }
+
+    }
+}
+
+@media only screen and(max-width: 992px){
+
+    .header{
+
+        &__title{
+
+            h3{
+                font-size: 58px;
+            }
+
+            p:after{
+                left: 30%;
+            }
+
+            p:before{
+                right: 30%;
+            }
+
+        }
+
+        &__btn{
+            padding: 0 190px;
+        }
+    }
+}
+
+@media only screen and(max-width: 768px){
+
+    .header{
+
+        &__title{
+            
+            h3{
+                font-size: 43px;
+            }
+
+            p:after{
+                left: 22%;
+            }
+
+            p:before{
+                right: 22%;
+            }
+
+        }
+
+        &__btn{
+            padding: 0 100px;
+        }
+    }
+}
+
+@media only screen and(max-width: 576px){
+
+    .header{
+        
+        &__title{
+            padding-top: 220px;
+
+            h3{
+                font-size: 42px;
+            }
+
+             p:after{
+                left: 20%;
+            }
+
+            p:before{
+                right: 20%;
+            }
+        }
+
+        &__btn{
+            padding: 0 80px;
+        }
+    }
+}
+
+@media only screen and(max-width: 420px){
+
+    .header{
+        
+        &__btn{
+            padding: 0 30px;
+        }
+
+        &__title{
+            
+            h3{
+                font-size: 32px;
+            }
+
+            p{
+                font-size: 14px;
+                margin-bottom: 8px;
+            }
+
+            span{
+                font-size: 14px;
+            }
+
+            p:after{
+                top: 10px;
+                left: 10%;
+            }
+
+            p:before{
+                top: 10px;
+                right: 10%;
+            }
+        }
     }
 }
 

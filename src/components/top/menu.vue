@@ -2,7 +2,7 @@
         <section class="navigation" :class="{'navigation__scroll' : backMenu == true}">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-4">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 col-8">
                         <div class="navigation__logo justify-content-center wow animate__animated animate__fadeIn" data-wow-delay=".4s">
                             <div class="navigation__logo-main" 
                                 :class="{'navigation__logo-main-black' : backMenu == true}" >
@@ -19,7 +19,13 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-8">
+                    <div class="col-xl-8 col-lg-8 col-md-6 col-sm-4 col-4">
+
+                        <div :class="{'navigation__adaptation-menu-black' : backMenu == true}" class="navigation__adaptation-menu">
+                            <span @click="rightMenu = true"><font-awesome-icon icon="fa-solid fa-bars" /></span>
+                        </div>
+
+
                         <ul class="navigation__nav wow animate__animated animate__fadeIn" data-wow-delay=".4s" :class="{'navigation__nav-black' : backMenu == true}">
                             <li>Home</li>
                             <li @click="activeСourses()">Сourses <span><font-awesome-icon :icon="toggleArrow" /></span></li>
@@ -31,7 +37,16 @@
                 </div>
             </div>
 
-            <dv-courses v-if="activeCoursesBuy == true"></dv-courses>
+            <dv-hideNavigation v-if="rightMenu == true"
+                               @showCourses="activeСourses()"
+                               @hideMenu="rightMenu = false"
+                               @activeAuthorization="authActive = true"
+            ></dv-hideNavigation>
+
+            <dv-courses @hideCourses="activeCoursesBuy = false"
+                        v-if="activeCoursesBuy == true">
+            </dv-courses>
+
             <dv-authorization v-if="authActive == true"
                               @hideRegistr="hideRegistr"
             ></dv-authorization>
@@ -40,13 +55,15 @@
 
 <script>
 
-import courses from '../top/courses'
-import authorization from './authorization.vue'
+import courses from './hideMenu/courses.vue'
+import authorization from './hideMenu/authorization.vue'
+import hideNavigation from './hideMenu/hideNavigation.vue'
 
 export default{
     components:{
         'dv-courses' : courses,
-        'dv-authorization' : authorization
+        'dv-authorization' : authorization,
+        'dv-hideNavigation' : hideNavigation
     },
     data(){
         return{
@@ -54,7 +71,7 @@ export default{
             backMenu: false,
             activeCoursesBuy: false,
             authActive: false,
-            leftMenuAnimation: true
+            rightMenu: false
         }
     },
 
@@ -99,7 +116,7 @@ export default{
 </script>
 
 <style lang="scss">
-    @import '../../assets/styles/allFiles.scss';
+    @import '../../assets/styles/allFiles';
 
     .navigation{
 
@@ -115,7 +132,6 @@ export default{
         }
 
         &__logo-main{
-
             h3{
                 @include secularOne();
 
@@ -147,14 +163,17 @@ export default{
                     font-size: 18px;
                     list-style-type: none;
                     color: $navColorText;
-                    margin-right: 64px;
+                    margin-right: 54px;
                     cursor: pointer;
 
                     span{
                         font-size: 12px;
                     }
-                   
                 }
+
+                li:nth-child(5){
+                       margin-right: 0px;
+                   }
   
         }
 
@@ -203,6 +222,55 @@ export default{
         #navigation__black{
             color: $colorBlack;
         }
+
+        &__adaptation-menu{
+            display: none;
+        }
+
+    }
+
+    // Adaptation
+
+    @media only screen and(max-width: 1200px){
+
+        .navigation{
+
+            &__nav li{
+                margin-right: 44px;
+            }
+        }
+        
+    }
+
+    @media only screen and(max-width: 992px){
+
+        .navigation{
+
+            &__nav {
+                display: none;
+            }
+
+            &__adaptation-menu{
+                padding-top: 14px;
+                display: block;
+                text-align: right;
+
+                span{
+                    
+                    font-size: 30px;
+                    cursor: pointer;
+                    color: $colorWhite;
+                }
+            }
+
+            &__adaptation-menu-black{
+                
+                span{
+                    color: $colorBlack;
+                }
+            }
+        }
+        
     }
 
 </style>

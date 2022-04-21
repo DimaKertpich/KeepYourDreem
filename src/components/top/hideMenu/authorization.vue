@@ -315,7 +315,7 @@ export default{
 
 <style lang="scss">
 
-@import "../../assets/styles/allFiles.scss";
+@import "../../../assets/styles/allFiles";
 
 .authorization{
     width: 370px;

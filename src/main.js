@@ -21,12 +21,18 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faDumbbell } from '@fortawesome/free-solid-svg-icons'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faEye, faEyeSlash, faCircleCheck, faUser, faAngleLeft, faAngleRight, faTrash, faTwitterSquare, faFacebook, faGooglePlusSquare, faLinkedin, faInstagramSquare, faAngleDown, faAngleUp);
+library.add(
+  faEye, faEyeSlash, faCircleCheck, faUser, faAngleLeft, 
+  faAngleRight, faTrash, faTwitterSquare, faFacebook, faGooglePlusSquare, 
+  faLinkedin, faInstagramSquare, faAngleDown, faAngleUp, faBars, faDumbbell, faXmark);
 
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
