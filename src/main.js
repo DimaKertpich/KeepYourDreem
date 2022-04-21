@@ -24,6 +24,7 @@ import { faAngleUp } from '@fortawesome/free-solid-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { faDumbbell } from '@fortawesome/free-solid-svg-icons'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRightArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -32,7 +33,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(
   faEye, faEyeSlash, faCircleCheck, faUser, faAngleLeft, 
   faAngleRight, faTrash, faTwitterSquare, faFacebook, faGooglePlusSquare, 
-  faLinkedin, faInstagramSquare, faAngleDown, faAngleUp, faBars, faDumbbell, faXmark);
+  faLinkedin, faInstagramSquare, faAngleDown, faAngleUp, faBars, faDumbbell, faXmark, 
+  faArrowRightArrowLeft);
 
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);

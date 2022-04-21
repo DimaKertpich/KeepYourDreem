@@ -21,7 +21,8 @@
 
                     <div class="col-xl-8 col-lg-8 col-md-6 col-sm-4 col-4">
 
-                        <div :class="{'navigation__adaptation-menu-black' : backMenu == true}" class="navigation__adaptation-menu">
+                        <div :class="{'navigation__adaptation-menu-black' : backMenu == true}" 
+                              class="navigation__adaptation-menu wow animate__animated animate__fadeIn" data-wow-delay=".4s">
                             <span @click="rightMenu = true"><font-awesome-icon icon="fa-solid fa-bars" /></span>
                         </div>
 
