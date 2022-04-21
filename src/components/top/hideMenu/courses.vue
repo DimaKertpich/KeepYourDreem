@@ -736,7 +736,7 @@ export default{
 
         .courses{
             width: 320px;
-            height: 530px;
+            height: 510px;
             margin-left: -160px;
 
             &__title{
@@ -769,13 +769,13 @@ export default{
             }
 
             &__info{
-                top: 130px;
+                top: 110px;
             }
 
             &__block-btn{
 
                 button{
-                    margin-top: 20px;
+                    margin-top: 10px;
                 }
             }
 
