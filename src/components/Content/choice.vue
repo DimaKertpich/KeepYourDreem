@@ -172,14 +172,14 @@ export default{
             setTimeout(() => {
             
                this.showGymText = false
-            }, 100)
+            }, 200)
         },
 
         hideHomeText(){
             setTimeout(() => {
             
                this.showHomeText = false
-            }, 100)
+            }, 200)
         },
 
         toggleChoice(){
@@ -536,7 +536,7 @@ export default{
 
     .choice{
 
-        padding-bottom: 40px;
+        padding-bottom: 20px;
 
         &__title{
 
@@ -627,7 +627,6 @@ export default{
 @media only screen and(max-width: 420px){
 
     .choice{
-
 
         &__home-img-title,
         &__gym-img-title{

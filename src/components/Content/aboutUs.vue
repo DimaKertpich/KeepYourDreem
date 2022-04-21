@@ -2,14 +2,14 @@
     <section class="traning">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-xl-4">
+                <div class="col-xl-6 col-lg-6 col-md-10 col-sm-12 col-12">
                     <div class="traning__title text-center wow animate__animated animate__fadeIn" data-wow-delay=".5s">
                         <h3>About our team</h3>         
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-xl-4">
+                <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-10">
                     <div class="traning__content text-center">
                         <div class="traning__content-title wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
                             <h3>You can join our Keep Your Dreem team by changing people with us</h3>
@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-xl-8">
+                <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12">
                     <div class="traning__content-about wow animate__animated animate__fadeInLeft" data-wow-delay="1s">
                         <h2>What we are?</h2>
 
@@ -29,7 +29,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-8">
+                <div class="col-xl-8 col-lg-10 col-md-12 col-sm12 col-12">
                     <div class="traning__content-about wow animate__animated animate__fadeInLeft" data-wow-delay="1s">
                         <h2>OUR MISSION & OBJECTIVES</h2>
 
@@ -40,12 +40,12 @@
                 </div>                
             </div>
             <div class="row justify-content-around text-center">
-                <div class="col-xl-6" style="overflow: hidden">
+                <div class="col-xl-6 col-lg-10 col-md-12 col-sm-12" style="overflow: hidden">
                     <div class="traning__content-about-form wow animate__animated animate__slideInLeft" data-wow-delay=".8s">
                         <h1>Subscribe to our newsletter</h1>
                     </div>
                 </div>
-                <div class="col-xl-6" style="overflow: hidden">
+                <div class="col-xl-6 col-lg-8 col-md-10 col-sm-10 col-12" style="overflow: hidden">
                     <div class="traning__content-about-form d-flex wow animate__animated animate__slideInRight" data-wow-delay=".6s">
                         <input type="email" name="email" placeholder="Enter your email"> 
                         <button type="button">Subscribe</button>
@@ -144,4 +144,50 @@
     }
 }
 
+@media only screen and(max-width: 1200px){
+
+    .traning{
+
+        &__content-about{
+            padding-bottom: 40px;
+        }
+
+        &__content-about-form{
+            margin: 20px 20px;
+        }
+
+    }
+}
+
+@media only screen and(max-width: 768px){
+
+    .traning{
+
+        &__content-about{
+            p{
+                font-size: 18px;
+            }
+        }
+        
+    }
+}
+
+@media only screen and(max-width: 576px){
+
+    .traning{
+
+        &__title{
+            h3{
+                font-size: 36px;
+            }
+        }
+
+        &__content-title{
+            margin-top: 10px;
+            h3{
+                font-size: 18px;
+            }
+        }
+    }
+}
 </style>
