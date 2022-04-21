@@ -150,7 +150,7 @@ export default{
         display: flex;
         justify-content: space-around;
         margin-top: 120px;
-        padding: 0px 280px;
+        padding: 0px 360px;
     }
 
     &__btn-app{
@@ -187,6 +187,10 @@ export default{
                 right: 33%;
             }
 
+        }
+
+        &__btn{
+            padding: 0px 280px;
         }
     }
 }
