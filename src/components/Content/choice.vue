@@ -196,6 +196,10 @@ export default{
     mounted(){
 
         window.addEventListener('resize', this.toggleChoice);
+
+        if(window.innerWidth < 992){
+            this.activeTypeHome = false               
+        }
     }
 }
 

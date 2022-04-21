@@ -2,7 +2,7 @@
     <section class="comments">
         <div class="container">
             <div class="row justify-content-center text-center">
-                <div class="col-xl-5">
+                <div class="col-xl-6 col-lg-8 col-md-10 col-sm-12 col-12">
                     <div class="comments__title" >
                         <h3 class="wow animate__animated animate__fadeIn" data-wow-delay=".5s">Leave your feedback</h3>
 
@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-xl-6">
+                <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-12">
                         <div :key="index" v-for="(data, index) in commentedUser" class="comments__feedback wow animate__animated animate__fadeIn">
                             <div class="comments__feedback-wrapper">
                                 <div class="comments__feedback-user">
@@ -244,6 +244,24 @@ export default{
 
             font-size: 18px;
             padding: 10px 10px 35px 10px
+        }
+    }
+}
+
+@media only screen and(max-width: 576px){
+
+    .comments{
+
+        &__title{
+
+            h3{
+                font-size: 32px;
+            }
+            
+            p{
+                font-size: 20px;
+                padding-top: 10px;
+            }
         }
     }
 }
