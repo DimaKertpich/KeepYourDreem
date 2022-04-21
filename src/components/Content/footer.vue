@@ -2,7 +2,7 @@
     <section class="footer wow animate__animated animate__fadeIn" data-wow-delay=".5s">
         <div class="container">
             <div class="row">
-                <div class="col-xl-4 wow animate__animated animate__fadeInLeft" data-wow-delay="1s">
+                <div class="offset-xl-0 col-xl-4 offset-lg-0 col-lg-5 offset-md-0 col-md-6 offset-sm-1 col-sm-10 offset-1 col-10 wow animate__animated animate__fadeInLeft" data-wow-delay="1s">
                     <div class="footer__wrapper">
                         <div class="footer__wrapper-flex d-flex">
                             <div class="footer__wrapper-flex-logo">
@@ -31,7 +31,7 @@
                     </div>
                 </div>
 
-                <div class="offset-xl-2 col-xl-2 wow animate__animated animate__fadeInRight" data-wow-delay="1s">
+                <div class="offset-xl-2 col-xl-2 offset-lg-1 col-lg-2 offset-md-0 col-md-2 offset-sm-0  col-sm-4 offset-0 col-6 wow animate__animated animate__fadeInRight" data-wow-delay="1s">
                         <ul class="footer__wrapper-link">
                             <h6>Learm more</h6>
                             <li><a href="../top/header.vue">When we work</a></li>
@@ -40,7 +40,7 @@
                         </ul>
                 </div>
 
-                <div class="col-xl-2 wow animate__animated animate__fadeInRight" data-wow-delay="1.2s">
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-6 wow animate__animated animate__fadeInRight" data-wow-delay="1.2s">
                         <ul class="footer__wrapper-link">
                             <h6>About us</h6>
                             <li><a href="../top/header.vue">About us</a></li>
@@ -48,7 +48,7 @@
                             <li><a href="../top/header.vue">Terms & Conditions</a></li>
                         </ul>
                 </div>
-                 <div class="col-xl-2 wow animate__animated animate__fadeInRight" data-wow-delay="1.4s">
+                 <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-6 wow animate__animated animate__fadeInRight" data-wow-delay="1.4s">
                         <ul class="footer__wrapper-link">
                             <h6>Support</h6>
                             <li><a href="../top/header.vue">F. A. Q.</a></li>
@@ -157,4 +157,44 @@
     }
 }
 
+@media only screen and(max-width: 992px){
+    
+    .footer{
+
+        &__wrapper-text{
+            p{
+                font-size: 16px;
+            }
+        }
+
+        &__wrapper-link {
+            li{
+                a{
+                    font-size: 12px;
+                }
+            }
+            
+        } 
+        
+        
+    }
+}
+
+@media only screen and(max-width: 768px){
+    
+    .footer{
+        &__wrapper{
+            margin-bottom: 30px;
+        }
+
+        &__wrapper-link {
+            li{
+                a{
+                    font-size: 14px;
+                }
+            }
+            
+        }   
+    }
+}
 </style>
