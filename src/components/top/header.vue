@@ -1,6 +1,6 @@
 <template>
-    <section class="header" 
-            :class="{'header-one' : activeImg == 1, 'header-two ' : activeImg == 2,'header-three ' : activeImg == 3,'header-four ' : activeImg == 4}">
+    <section id="home" class="header" 
+            :class="{'header-one' : activeImg == 1, 'header-two' : activeImg == 2,'header-three' : activeImg == 3,'header-four' : activeImg == 4}">
         <div class="container">
             <div class="row justify-content-center">
               <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 text-center">
@@ -66,7 +66,7 @@ export default{
 }
 
 .animationBg{
-     animation: slide 4s infinite;
+    animation: slide 4s infinite;
 }
 
 .header{

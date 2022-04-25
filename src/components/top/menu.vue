@@ -28,11 +28,13 @@
 
 
                         <ul class="navigation__nav wow animate__animated animate__fadeIn" data-wow-delay=".4s" :class="{'navigation__nav-black' : backMenu == true}">
-                            <li>Home</li>
+                            <li><a href="#home">Home</a></li>
                             <li @click="activeСourses()">Сourses <span><font-awesome-icon :icon="toggleArrow" /></span></li>
                             <li>Promotions</li>
-                            <li>About us</li>
-                            <li @click="authActive = !authActive" :id="btnStyle" class="navigation__nav-btn" :class="{'navigation__nav-btn-black' : backMenu == true}">Log in</li>
+                            <li><a href="#aboutUs">About us</a></li>
+                            <li @click="authActive = !authActive" :id="btnStyle" 
+                                class="navigation__nav-btn" 
+                                :class="{'navigation__nav-btn-black' : backMenu == true}">Log in</li>
                         </ul>
                     </div>
                 </div>
@@ -167,6 +169,12 @@ export default{
                     margin-right: 54px;
                     cursor: pointer;
 
+                    a{
+                        text-transform: none;
+                        text-decoration: none;
+                        color: $navColorText;
+                    }
+
                     span{
                         font-size: 12px;
                     }
@@ -208,6 +216,10 @@ export default{
         &__nav-black{
             li{
                 color: $navColorTextBlack;
+
+                a{
+                    color: $navColorTextBlack;
+                }
             }
         }
 

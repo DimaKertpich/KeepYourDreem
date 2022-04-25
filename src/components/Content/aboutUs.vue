@@ -1,5 +1,5 @@
 <template>
-    <section class="traning">
+    <section id="aboutUs" class="traning">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-6 col-md-10 col-sm-12 col-12">
@@ -63,10 +63,9 @@
 
 .traning{
 
+    padding-top: 130px;
 
     &__title{
-
-        margin-top: 100px;
 
         h3{
             @include hammersmith();

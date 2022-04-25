@@ -3,10 +3,10 @@
         <div class="hideNavigation__line"></div>
 
         <ul class="hideNavigation__list">
-            <li>Home</li>
+            <li><a href="#home">Home</a></li>
             <li @click="showCourses">Courses<span><font-awesome-icon icon="fa-solid fa-dumbbell" /></span></li>
             <li>Promotions</li>
-            <li>About us</li>
+            <li><a href="#aboutUs">About us</a></li>
             <li @click="activeAuthorization">Log in</li>
         </ul>
 
@@ -74,6 +74,12 @@ export default{
                 cursor: pointer;
                 line-height: 44px;
                 max-width: 120px;
+
+                a{
+                    text-transform: none;
+                    text-decoration: none;
+                    color: $navColorText;
+                }
 
                 span{
                     font-size: 18px;
